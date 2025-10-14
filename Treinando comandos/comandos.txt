@@ -1,0 +1,11 @@
+Comandos aprendidos:
+
+ls	- Lista diretórios e arquivos
+cd  - Acessa ou sai do diretório
+touch - Cria um arquivo
+mkdir - Cria um diretório
+rmdir - Remove um repositório
+nano - Edição de arquivos
+vim - Edição de arquivos (também)
+cat - Mostra o conteúdo do arquívo
+mv - Move o arquivo ou diretório e renomeia
