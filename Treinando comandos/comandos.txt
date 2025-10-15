@@ -17,4 +17,4 @@ git config --global --list
 git log
 git add (nome)
 git add .
-git commit
+git commit -m "Mensagem a ser digitada"
