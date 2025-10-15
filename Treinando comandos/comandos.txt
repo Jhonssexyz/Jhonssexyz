@@ -15,6 +15,10 @@ mv - Move o arquivo ou diretório e renomeia
 git --version
 git config --global --list
 git log
-git add (nome)
+git add "nome do arquivo"
 git add .
 git commit -m "Mensagem a ser digitada"
+
+git checkout (id do commit)
+git checkout master/main            - Para voltar ao último commit
+git revert (id do commit)
