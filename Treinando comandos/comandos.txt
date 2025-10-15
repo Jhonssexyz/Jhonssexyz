@@ -9,3 +9,12 @@ nano - Edição de arquivos
 vim - Edição de arquivos (também)
 cat - Mostra o conteúdo do arquívo
 mv - Move o arquivo ou diretório e renomeia
+
+                comandos do git:
+
+git --version
+git config --global --list
+git log
+git add (nome)
+git add .
+git commit
