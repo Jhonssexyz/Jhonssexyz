@@ -15,10 +15,23 @@ mv - Move o arquivo ou diretório e renomeia
 git --version
 git config --global --list
 git log
+git status
 git add "nome do arquivo"
 git add .
 git commit -m "Mensagem a ser digitada"
 
+                Navegar, editar e excluir commits
+
 git checkout (id do commit)
 git checkout master/main            - Para voltar ao último commit
 git revert (id do commit)
+git reset (id do commit)
+
+                Criar, excluir e navegar entre branchs
+
+
+git branch     - Para visualizar as branch
+git branch (nome da branch) - Para criar uma nova branch
+git checkout (nome da branch) - Para mudar de branch
+git branch -d (nome da branch) - Para deletar a branch
+git branch -D (nome da branch) - Para deletar de maneira forçada a branch
