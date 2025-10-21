@@ -13,12 +13,15 @@ mv - Move o arquivo ou diretório e renomeia
                 comandos do git:
 
 git --version
-git config --global --list
+git config --global --list - Para ver TODAS as configurações
+git config --list --show-origin - Para ver TODAS as configurações E ONDE elas estão salvas
 git log
 git status
 git add "nome do arquivo"
 git add .
 git commit -m "Mensagem a ser digitada"
+git clone
+git remote add origin (url) - Conecta um repositório local ao repositório do git (permiti comitar o local para a nuvem)
 
                 Navegar, editar e excluir commits
 
@@ -35,3 +38,12 @@ git branch (nome da branch) - Para criar uma nova branch
 git checkout (nome da branch) - Para mudar de branch
 git branch -d (nome da branch) - Para deletar a branch
 git branch -D (nome da branch) - Para deletar de maneira forçada a branch
+
+                Configurações globais, locais e de sistema
+
+git config (região de abrangência) init.defaultBranch (nome desejado)
+git config (região de abrangência) credential.helper (cache ou store)
+
+
+git config --show-origin credential.helper - Para ver UMA chave E ONDE ela está salva
+git config credential.helper - Para ver o valor de UMA chave
