@@ -15,29 +15,58 @@ mv - Move o arquivo ou diretório e renomeia
 git --version
 git config --global --list - Para ver TODAS as configurações
 git config --list --show-origin - Para ver TODAS as configurações E ONDE elas estão salvas
+git log --oneline
 git log
+git reflog
 git status
 git add "nome do arquivo"
 git add .
 git commit -m "Mensagem a ser digitada"
+git commit --amend -m "(Novo nome)"    - Altera o nome do último commit
 git clone
 git remote add origin (url) - Conecta um repositório local ao repositório do git (permiti comitar o local para a nuvem)
 
+                Pull e Push e outros
+
+git pull -u origin (url)    - Apenas uma vez. Posteriormente apenas: git pull
+git fecht origin (nome da branch)   - Serve para baixar o conteúdo da branch remota sem mesclar. Para situações de análises
+git diff (nomes das brach)  - São dois parâmetros. Serve para comparar branch
+git push -u origin (url)    - Apenas uma vez. Posteriormente apenas: git push
+
+
                 Navegar, editar e excluir commits
 
+git restore (nome do arquivo)       - Para restaurar possíveis mudanças feitas. (Deve ser usado antes do git commit, caso contrário, é só usar o git revert
 git checkout (id do commit)
 git checkout master/main            - Para voltar ao último commit
 git revert (id do commit)
-git reset (id do commit)
+git --(soft, mixed ou hard) reset (id do commit)
+              |
+              |
+             \_/
+--soft
+Muda o commit, mas mantém suas alterações nos arquivos E na área de "staging" (prontas para serem commitadas de novo).
+Resumo: "Quero refazer o último commit (ex: só mudar a mensagem)."
+
+--mixed (O Padrão)
+Muda o commit e mantém suas alterações nos arquivos, mas as remove da área de "staging". Você precisará dar git add nelas de novo.
+Resumo: "Quero manter o código, mas quero re-selecionar o que vai no próximo commit."
+
+--hard (PERIGOSO!)
+Muda o commit e APAGA TUDO. Suas alterações são descartadas permanentemente dos seus arquivos e da área de "staging".
+Resumo: "Quero voltar no tempo e jogar fora todo o trabalho que fiz desde aquele commit."
+
 
                 Criar, excluir e navegar entre branchs
 
 
 git branch     - Para visualizar as branch
 git branch (nome da branch) - Para criar uma nova branch
+git branch -v   - Exibe todas as branch existentes
 git checkout (nome da branch) - Para mudar de branch
 git branch -d (nome da branch) - Para deletar a branch
 git branch -D (nome da branch) - Para deletar de maneira forçada a branch
+git merge (nome da branch)  - Mesclar branch
 
                 Configurações globais, locais e de sistema
 
