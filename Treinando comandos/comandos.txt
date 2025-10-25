@@ -1,4 +1,4 @@
-Comandos aprendidos:
+#                Comandos Linux aprendidos:
 
 ls	- Lista diretórios e arquivos
 cd  - Acessa ou sai do diretório
@@ -10,36 +10,84 @@ vim - Edição de arquivos (também)
 cat - Mostra o conteúdo do arquívo
 mv - Move o arquivo ou diretório e renomeia
 
-                comandos do git:
+
+#                comandos de configurações git:
 
 git --version
 git config --global --list - Para ver TODAS as configurações
 git config --list --show-origin - Para ver TODAS as configurações E ONDE elas estão salvas
-git log --oneline
-git log
-git reflog
+
+git config (região de abrangência) init.defaultBranch (nome desejado)   - Para alterar o nome da branch main
+git config (região de abrangência) credential.helper (cache ou store)
+
+git config --show-origin credential.helper - Para ver UMA chave E ONDE ela está salva
+git config credential.helper - Para ver o valor de UMA chave
+
+
+#                Locais e Remotos
+
 git status
 git add "nome do arquivo"
 git add .
+
+
+#                Commits Locais
+
+git log --oneline
+git log
+git reflog
+
 git commit -m "Mensagem a ser digitada"
 git commit --amend -m "(Novo nome)"    - Altera o nome do último commit
+
+#                Commits Remotos
+
 git clone
 git remote add origin (url) - Conecta um repositório local ao repositório do git (permiti comitar o local para a nuvem)
 
-                Pull e Push e outros
+
+#                Pull e Push e outros
 
 git pull -u origin (url)    - Apenas uma vez. Posteriormente apenas: git pull
+git push -u origin (url)    - Apenas uma vez. Posteriormente apenas: git push
 git fecht origin (nome da branch)   - Serve para baixar o conteúdo da branch remota sem mesclar. Para situações de análises
 git diff (nomes das brach)  - São dois parâmetros. Serve para comparar branch
-git push -u origin (url)    - Apenas uma vez. Posteriormente apenas: git push
 
-
-                Navegar, editar e excluir commits
+#                Navegar, editar e excluir commits
 
 git restore (nome do arquivo)       - Para restaurar possíveis mudanças feitas. (Deve ser usado antes do git commit, caso contrário, é só usar o git revert
 git checkout (id do commit)
 git checkout master/main            - Para voltar ao último commit
 git revert (id do commit)
+git --(soft, mixed ou hard) reset (id do commit)
+
+
+
+#                Criar, excluir e navegar entre branchs
+
+
+git branch     - Para visualizar as branch
+git branch (nome da branch) - Para criar uma nova branch
+git branch -v   - Exibe todas as branch existentes
+
+git checkout (nome da branch) - Para mudar de branch
+git branch -d (nome da branch) - Para deletar a branch
+git branch -D (nome da branch) - Para deletar de maneira forçada a branch
+git merge (nome da branch)  - Mesclar branch
+
+
+
+  ______            _ _                /\/|                 _                                            _           
+ |  ____|          | (_)              |/\/                 | |                                          | |          
+ | |__  __  ___ __ | |_  ___ __ _  ___ ___   ___  ___    __| | ___    ___ ___  _ __ ___   __ _ _ __   __| | ___  ___ 
+ |  __| \ \/ / '_ \| | |/ __/ _` |/ __/ _ \ / _ \/ __|  / _` |/ _ \  / __/ _ \| '_ ` _ \ / _` | '_ \ / _` |/ _ \/ __|
+ | |____ >  <| |_) | | | (_| (_| | (_| (_) |  __/\__ \ | (_| |  __/ | (_| (_) | | | | | | (_| | | | | (_| | (_) \__ \
+ |______/_/\_\ .__/|_|_|\___\__,_|\___\___/ \___||___/  \__,_|\___|  \___\___/|_| |_| |_|\__,_|_| |_|\__,_|\___/|___/
+             | |                   )_)                                                                               
+             |_| 
+
+______________________________________________________________________________________________________________________________
+
 git --(soft, mixed ou hard) reset (id do commit)
               |
               |
@@ -57,22 +105,4 @@ Muda o commit e APAGA TUDO. Suas alterações são descartadas permanentemente d
 Resumo: "Quero voltar no tempo e jogar fora todo o trabalho que fiz desde aquele commit."
 
 
-                Criar, excluir e navegar entre branchs
-
-
-git branch     - Para visualizar as branch
-git branch (nome da branch) - Para criar uma nova branch
-git branch -v   - Exibe todas as branch existentes
-git checkout (nome da branch) - Para mudar de branch
-git branch -d (nome da branch) - Para deletar a branch
-git branch -D (nome da branch) - Para deletar de maneira forçada a branch
-git merge (nome da branch)  - Mesclar branch
-
-                Configurações globais, locais e de sistema
-
-git config (região de abrangência) init.defaultBranch (nome desejado)
-git config (região de abrangência) credential.helper (cache ou store)
-
-
-git config --show-origin credential.helper - Para ver UMA chave E ONDE ela está salva
-git config credential.helper - Para ver o valor de UMA chave
+______________________________________________________________________________________________________________________________
